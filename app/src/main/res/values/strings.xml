@@ -3,4 +3,5 @@
     <string name="weather_sun_day">sunday</string>
     <string name="weather_desc">ujab rintik-rintik</string>
     <string name="weather_temperature">17 derajat celsius</string>
+    <string name="cuac_Hari">Cuaca hari ini</string>
 </resources>
