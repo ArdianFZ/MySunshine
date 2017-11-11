@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import com.code.pali.mysunshine.adapter.WeatherAdapter;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -32,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView weatherList;
 
     private WeatherAdapter wetherAdapter;
+
+    private ArrayList<Weather> WeatherListData;
 
 
     @Override
@@ -58,8 +63,16 @@ public class MainActivity extends AppCompatActivity {
                 new LinearLayoutManager(
                         this, LinearLayoutManager.VERTICAL,false));
 
-        wetherAdapter = new WeatherAdapter ();
-       //
+        WeatherListData = new ArrayList<Weather>();
+        WeatherListData.add(new Weather(R.mipmap.ic_launcher,"11 november 2017","cerah","17"));
+        WeatherListData.add(new Weather(R.mipmap.ic_launcher,"12 november 2017","cerah sangat","30"));
+        WeatherListData.add(new Weather(R.mipmap.ic_launcher,"13 november 2017","hujan","20"));
+        WeatherListData.add(new Weather(R.mipmap.ic_launcher,"14 november 2017","Rintik-Rintik","28"));
+        WeatherListData.add(new Weather(R.mipmap.ic_launcher,"15 november 2017","Cerah lagi","40"));
+
+
+        wetherAdapter = new WeatherAdapter (WeatherListData);
+
         weatherList.setAdapter(wetherAdapter);
 
 
